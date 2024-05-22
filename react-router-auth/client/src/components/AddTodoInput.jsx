@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+// eslint-disable-next-line react/prop-types
 const AddTodoInput = ({ mutate }) => {
 
   const [input, setInput] = useState('');
