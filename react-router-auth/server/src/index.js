@@ -15,8 +15,7 @@ app.use(morgan('tiny'));
 app.use(express.json());
 app.use(router);
 
-mongoose.connect(process.env.MONGO_URI)
-.then(() => {
+mongoose.connect(process.env.MONGO_URI).then(() => {
   console.log('starting on port', process.env.PORT)
   app.listen(process.env.PORT || 3000);
 })
