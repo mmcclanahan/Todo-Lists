@@ -6,7 +6,8 @@ import {
   QueryClientProvider
 } from '@tanstack/react-query'
 
-const queryClient = new QueryClient()
+const queryClient = new QueryClient();
+//{defaultOptions: {queries: {staleTime: 4000}}}
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

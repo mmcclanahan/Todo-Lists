@@ -7,9 +7,13 @@ import updateTodo from '../API/updateTodo';
 export const useTodos = () => {
   const queryClient = useQueryClient();
 
+  //stale time triggers: switching tabs (refocusing the tab) / default stale time in index.jsx
+  //refetchInterval : interval fn calls
   const todosQuery = useQuery({
     queryKey: ['todos'],
     queryFn: readTodosRequest,
+    //staleTime: 6000,
+    //refetchInterval: 4000,
   });
 
   const addTodoMutation = useMutation({
