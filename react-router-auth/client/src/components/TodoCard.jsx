@@ -8,7 +8,7 @@ const TodoCard = ({ todoObj, deleteTodo, updateTodo }) => {
     <li>
       <span>{todoObj.text}{todoObj.completed ? "yes": "no"}</span>
       <button onClick={() => {completed()}}>complete</button>
-      <button onClick={() => {console.log('hitdelete'); deleteTodo(todoObj._id)}}>delete</button>
+      <button onClick={() => {deleteTodo(todoObj._id)}}>delete</button>
     </li>
   )
 }
