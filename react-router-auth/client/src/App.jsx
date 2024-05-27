@@ -26,7 +26,7 @@ function App() {
           />
         ))}
       </ul>
-      <AddTodoInput mutate={addTodoMutation.mutate} />
+      <AddTodoInput addTodo={addTodoMutation.mutate} />
       {addTodoMutation.isLoading && <p>Adding todo...</p>}
     </div>
   );

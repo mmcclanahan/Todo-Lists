@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 // eslint-disable-next-line react/prop-types
-const AddTodoInput = ({ mutate }) => {
+const AddTodoInput = ({ addTodo }) => {
 
   const [input, setInput] = useState('');
 
@@ -12,7 +12,7 @@ const AddTodoInput = ({ mutate }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (input.trim() !== '') {
-      mutate(input);
+      addTodo(input);
     }
     setInput('');
   };
